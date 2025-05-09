@@ -1,0 +1,15 @@
+.status {
+  margin-bottom: 20px;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+}
+
+.board-row {
+  display: flex;
+  gap: 1px;
+}

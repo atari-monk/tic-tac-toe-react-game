@@ -1,8 +1,32 @@
 .square {
-  flex: 1;
-  border: 1px solid #ccc;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  /* font-size: 5vw; */
-}
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    border: 2px solid #222;
+    font-weight: bold;
+    font-size: 6vw; /* responsive text size */
+    color: white;   /* fallback color */
+    transition: box-shadow 0.3s, border-color 0.3s;
+    user-select: none;
+  }
+  
+  /* Red glow on hover/tap */
+  .square:hover,
+  .square:active,
+  .square:focus-visible {
+    border-color: red;
+    box-shadow: 0 0 10px red;
+    outline: none;
+  }
+  
+  /* Colors for values (React approach recommended below) */
+  .square.x {
+    color: red;
+  }
+  
+  .square.o {
+    color: yellow;
+  }
+  

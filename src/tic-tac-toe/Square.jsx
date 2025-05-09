@@ -1,4 +1,5 @@
 import {useRef, useEffect, useState} from 'react'
+import './Square.css' // Assuming you move styles here
 
 export default function Square({value, onSquareClick}) {
   const ref = useRef(null)
@@ -18,10 +19,12 @@ export default function Square({value, onSquareClick}) {
     return () => resizeObserver.disconnect()
   }, [])
 
+  const valueClass = value === 'X' ? 'x' : value === 'O' ? 'o' : ''
+
   return (
     <div
-      className="square"
       ref={ref}
+      className={`square ${valueClass}`}
       onClick={onSquareClick}
       style={{fontSize}}
     >
